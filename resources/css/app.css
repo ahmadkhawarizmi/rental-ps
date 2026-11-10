@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    [x-cloak] {
+        display: none !important;
+    }
+
+    body {
+        @apply bg-slate-100 text-slate-800 antialiased;
+    }
+}
+
+@layer components {
+    /* Kartu dan judul halaman */
+    .card {
+        @apply rounded-xl border border-slate-200 bg-white shadow-sm;
+    }
+
+    .page-heading {
+        @apply text-2xl font-semibold tracking-tight text-slate-900;
+    }
+
+    .page-subtitle {
+        @apply mt-1 text-sm text-slate-500;
+    }
+
+    /* Tombol */
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-60;
+    }
+
+    .btn-sm {
+        @apply px-3 py-1.5 text-xs;
+    }
+
+    .btn-primary {
+        @apply bg-navy-900 text-white hover:bg-navy-700 focus:ring-navy-500/40;
+    }
+
+    .btn-secondary {
+        @apply border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 focus:ring-slate-300;
+    }
+
+    .btn-danger {
+        @apply bg-red-600 text-white hover:bg-red-700 focus:ring-red-400/40;
+    }
+
+    /* Form */
+    .form-group {
+        @apply space-y-0;
+    }
+
+    .form-label {
+        @apply mb-1.5 block text-sm font-medium text-slate-700;
+    }
+
+    .required {
+        @apply text-red-500;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+        @apply block w-full rounded-lg border-slate-300 bg-white px-3 py-2 text-sm text-slate-800 shadow-sm placeholder:text-slate-400 focus:border-navy-600 focus:ring-navy-500/30;
+    }
+
+    .form-textarea {
+        @apply min-h-[90px];
+    }
+
+    .form-error {
+        @apply mt-1.5 text-sm text-red-600;
+    }
+
+    /* Tabel */
+    .table-standard {
+        @apply min-w-full divide-y divide-slate-200 text-sm;
+    }
+
+    .table-standard thead {
+        @apply bg-slate-50;
+    }
+
+    .table-standard th {
+        @apply whitespace-nowrap px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500;
+    }
+
+    .table-standard td {
+        @apply px-4 py-3 align-middle text-slate-700;
+    }
+
+    .table-standard tbody {
+        @apply divide-y divide-slate-100 bg-white;
+    }
+
+    .table-standard tbody tr {
+        @apply transition-colors hover:bg-slate-50;
+    }
+
+    .empty-state {
+        @apply px-4 py-10 text-center text-sm text-slate-500;
+    }
+
+    /* Badge status */
+    .badge {
+        @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-medium;
+    }
+
+    .badge-green {
+        @apply bg-emerald-50 text-emerald-700 ring-1 ring-inset ring-emerald-200;
+    }
+
+    .badge-blue {
+        @apply bg-blue-50 text-blue-700 ring-1 ring-inset ring-blue-200;
+    }
+
+    .badge-gray {
+        @apply bg-slate-100 text-slate-600 ring-1 ring-inset ring-slate-200;
+    }
+
+    .badge-orange {
+        @apply bg-orange-50 text-orange-700 ring-1 ring-inset ring-orange-200;
+    }
+
+    .badge-red {
+        @apply bg-red-50 text-red-700 ring-1 ring-inset ring-red-200;
+    }
+
+    /* Notifikasi */
+    .alert {
+        @apply flex items-start gap-3 rounded-lg border px-4 py-3 text-sm;
+    }
+
+    .alert-success {
+        @apply border-emerald-200 bg-emerald-50 text-emerald-800;
+    }
+
+    .alert-error {
+        @apply border-red-200 bg-red-50 text-red-800;
+    }
+
+    .alert-info {
+        @apply border-blue-200 bg-blue-50 text-blue-800;
+    }
+}

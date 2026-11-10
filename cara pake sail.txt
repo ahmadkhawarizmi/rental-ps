@@ -1,0 +1,7 @@
+1. buka docker dekstop
+2. buka terminal ubuntu
+3. ketik "cd /mnt/c/Users/HP/Documents/Project/sistem-rental" buat masuk directory folder
+4. sail up -d buat aktifin Project
+5. sail ps buat cek mesin
+6. sail down buat matiin 
+7. sail artisan migrate
